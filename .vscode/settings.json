@@ -1,0 +1,12 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\Henrik\\source\\c\\snake",
+            "binaryPath": "c:\\Users\\Henrik\\source\\c\\snake\\main.exe",
+            "binaryArgs": []
+        }
+    ],
+    "files.associations": {
+        "analogread.h": "c"
+    }
+}
