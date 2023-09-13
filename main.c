@@ -194,6 +194,7 @@ int main(){
 
         if( millis_get() - antalMilliSekunderSenasteBytet > 200 ){
 
+            antalMilliSekunderSenasteBytet = millis_get();
             clearSnake(&snake);                        
             if(!moveSnake(&snake,currentDirection)){
                 printf("GAME OVER WALL");
@@ -215,7 +216,7 @@ int main(){
                 break;
             }
             drawSnake(&snake);                              
-            antalMilliSekunderSenasteBytet = millis_get();  
+            //antalMilliSekunderSenasteBytet = millis_get();  
         }
     }
     return 0;
