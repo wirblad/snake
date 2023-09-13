@@ -29,7 +29,7 @@ typedef struct{
 }Position;
 
 typedef struct{
-    Position pos[ROWS*COLS]; 
+    Position pos[ROWS*COLS];
     int size;  
 }Snake;
 
@@ -214,7 +214,6 @@ int main(){
                 break;
             }
             drawSnake(&snake);                              
-            //antalMilliSekunderSenasteBytet = millis_get();  
         }
     }
     return 0;
