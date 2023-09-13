@@ -268,8 +268,8 @@ END GROUP
                 0x00000204                moveSnake
                 0x000002aa                initSnake
                 0x000002e0                isPositionOccupiedBySnake
-                0x00000318                setFoodPosition
-                0x00000390                isPositionOccupiedBySnakeExceptHead
+                0x00000318                isPositionOccupiedBySnakeExceptHead
+                0x00000352                setFoodPosition
                 0x000003ca                drawFood
                 0x000003d8                clearFood
  .text          0x000003e6      0x148 bin/debug/max72xx.o

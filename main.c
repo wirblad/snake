@@ -128,16 +128,6 @@ bool isPositionOccupiedBySnake(Position *pos, Snake *snake){
     return false;
 }
 
-void setFoodPosition(Position *food, Snake *snake){
-
-    while(true){
-        food->Y = (rand() % 7);
-        food->X = (rand() % 15);
-        if(!isPositionOccupiedBySnake(&food,&snake))
-            break;
-    }
-}
-
 bool isPositionOccupiedBySnakeExceptHead(Position *pos, Snake *snake){ 
 
     for(int segment = 1; segment < snake->size; segment++){
@@ -148,13 +138,22 @@ bool isPositionOccupiedBySnakeExceptHead(Position *pos, Snake *snake){
     return false;
 }
 
+void setFoodPosition(Position *food, Snake *snake){
+
+    while(true){
+        food->Y = (rand() % 7);
+        food->X = (rand() % 15);
+        if(!isPositionOccupiedBySnake(&food,&snake))
+            break;
+    }
+}
+
 void drawFood(Position *food){
     max7219b_set(food->X,food->Y);
     max7219b_out();
 }
 
 void clearFood(Position *food){
-
     max7219b_clr(food->X,food->Y);
     max7219b_out();
 }
@@ -184,7 +183,6 @@ int main(){
     while(analogRead(HORZ_PIN) == start_horz && analogRead(VERT_PIN) == start_vert){
         printf("WAITING FOR PLAYER"); 
     }
-
     setFoodPosition(&food,&snake);
     drawFood(&food);
     
